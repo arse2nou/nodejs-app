@@ -3,6 +3,7 @@ pipeline{
 
     stages{
         stage('dep install'){
+            agent { docker { image 'node'}}
             steps{
                 sh 'npm install'
             }
